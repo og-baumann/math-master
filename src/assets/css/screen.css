@@ -4,3 +4,21 @@
 	line-height: 1.6em;
 	text-align: center;
 }
+
+.mm-screen .mm-problem {
+	font-size: 1.5em;
+	display: table;
+	border-spacing: 10px;
+	margin: 0 auto;
+}
+
+.mm-screen .mm-problem > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mm-screen .mm-problem span {
+	font-size: 1.375em;
+	font-weight: bold;
+}
+

@@ -110,25 +110,25 @@ class Main extends Component {
 		switch (z) {
 			case 'add' : 
 				a = x + y; 
-				txt = " + "; 
+				txt = "faPlus"; 
 				break;
 			case 'subtract' : 
 				a = x - y; 
-				txt = " - "; 
+				txt = "faMinus"; 
 				break;
 			case 'multiply' : 
 				a = x * y; 
-				txt = " x "; 
+				txt = "faTimes"; 
 				break;
 			case 'divide' : 
 				x = x * y;
 				a = x / y;
-				txt = " / "; 
+				txt = "faDivide"; 
 				break;
 			default : a = null;
 		}
 		this.setState({
-			output: x + txt + y + ' = ?',
+			output: [x,txt,y],
 			answer: a
 		});
 		this.manageButtons(a);

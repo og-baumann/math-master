@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faStopwatch from '@fortawesome/fontawesome-free-solid/faStopwatch'
 import './assets/css/timer.css';
+import logo from './assets/images/logo.png';
 
 class Timer extends Component {
 
@@ -11,10 +12,10 @@ class Timer extends Component {
 		let secs = this.props.playTime[1];
 		let mill = this.props.playTime[2] < 10 ? '0'+this.props.playTime[2] : this.props.playTime[2];
 
-		if(!this.props.gameState) {
+		if(!this.props.gameState || this.props.gameState === 'gameOver') {
 			return (
 				<div className="mm-timer">
-					<div className="mm-title">Welcome to <span>Math-Master</span></div>
+					<div className="mm-title"><img src={logo} alt="MathMaster" /></div>
 				</div>
 			)
 		} else {
