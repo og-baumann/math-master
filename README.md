@@ -12,9 +12,7 @@ npm start
 
 ## Authors
 
-* **Chris Baumann** - *Initial work - commits done under cbaumann112* - [og-baumann](https://github.com/og-baumann)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+**Chris Baumann** - [og-baumann](https://github.com/og-baumann)
 
 ## License
 
