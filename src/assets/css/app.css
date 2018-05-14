@@ -1,0 +1,30 @@
+body, html {
+	font-size: 10px;
+	font-family: sans-serif;
+}
+
+.mm {
+	display: block;
+	max-width: 400px;
+	min-width: 300px;
+	width: 100%;
+	margin: 35px auto;
+	border: solid 1px #bdc3c7;
+	border-radius: 4px;
+	background: #ecf0f1;
+}
+
+.mm-header, .mm-body, .mm-footer {
+	display: block;
+	width: 100%;
+}
+
+.mm-body {
+	border-style: solid;
+	border-color: #bdc3c7;
+	border-width: 1px 0 1px 0;
+}
+
+
+
+

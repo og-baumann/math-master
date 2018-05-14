@@ -1,0 +1,66 @@
+.mm-panel {
+	padding: 21px;
+}
+
+form {
+	font-size: 0;
+}
+
+.mm-select {
+	background: #fff;
+	color: #2980b9;
+	height: 44px;
+	font-size: 1.4rem;
+	border: solid 1px #2980b9;
+	padding: 12px;
+	width: 70%;
+	text-align: center;
+	border-radius: 4px 0 0 4px;
+	border-width: 1px 0 1px 1px;
+	cursor: pointer;
+}
+
+.mm-play {
+	background: #2980b9;
+	height: 44px;
+	border-radius: 0 4px 4px 0;
+	display: inline-block;
+	font-size: 1.4rem;
+	color: #fff;
+	border: solid 1px #2980b9;
+	padding: 12px;
+	width: 30%;
+	text-align: center;
+	border-width: 1px 1px 1px 0;
+	cursor: pointer;
+}
+
+.mm-btn {
+	background: #fff;
+	height: 44px;
+	display: inline-block;
+	font-size: 1.4rem;
+	color: #2980b9;
+	border: solid 1px #2980b9;
+	padding: 12px;
+	width: 25%;
+	text-align: center;
+	border-width: 1px 1px 1px 0;
+	cursor: pointer;
+	transition: 200ms;
+}
+
+.mm-btn:hover {
+	background: #2980b9;
+	color: #fff;
+}
+
+.mm-btn:first-child {
+	border-left: solid 1px;
+	border-radius: 4px 0 0 4px;
+}
+
+.mm-btn:last-child {
+	border-radius: 0 4px 4px 0;
+}
+
