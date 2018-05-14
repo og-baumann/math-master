@@ -127,6 +127,10 @@ class Main extends Component {
 				break;
 			default : a = null;
 		}
+		if(!parseInt(a, 10)) {
+			this.generate();
+			return;
+		}
 		this.setState({
 			output: [x,txt,y],
 			answer: a
