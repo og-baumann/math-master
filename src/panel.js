@@ -1,29 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './assets/css/panel.css';
 
-class Panel extends Component {
-
-	getButtons (a,i) {
-		return <button onClick={this.props.clickAction} value={a} key={i} className="mm-btn">{a}</button>;
-	}
-
-	render () {
-
-		let btns = this.props.btns.map(this.getButtons.bind(this));
-
-		if(this.props.gameState === 'play') {
-			return (
-				<div className="mm-panel">
+const Panel = ({action, play, gameState, btns, clickAction}) => {
+	if(gameState === 'play') {
+		return 	<div className="mm-panel">
 					<div>
-						{btns}
+						{btns.map((a,i) => (<button onClick={clickAction} value={a} key={i} className="mm-btn">{a}</button>))}
 					</div>
-				</div>	
-			);
-		} else {
-			return (
-				<div className="mm-panel">
-					<form onSubmit={this.props.play}>
-						<select className="mm-select" defaultValue="normal" onChange={this.props.action}>
+				</div>
+	} else {
+		return 	<div className="mm-panel">
+					<form onSubmit={play}>
+						<select className="mm-select" defaultValue="normal" onChange={action}>
 							<option value="easy">Easy</option>
 							<option value="normal">Normal</option>
 							<option value="hard">Hard</option>
@@ -31,8 +19,6 @@ class Panel extends Component {
 						<button type="submit" className="mm-play">Play</button>
 					</form>
 				</div>				
-			)
-		}
 	}
 }
 

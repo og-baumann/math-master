@@ -29,8 +29,6 @@ class Main extends Component {
 		this.generate = this.generate.bind(this);
 		this.manageButtons = this.manageButtons.bind(this);
 		this.score = this.score.bind(this);
-
-		this.base = this.state;
 	}
 
 	toggleMode (e) {
@@ -163,7 +161,6 @@ class Main extends Component {
 			    </div>
 			    <div className="mm-footer">
 			    	<Panel  action={this.toggleMode}
-							mode={this.state.mode}
 							play={this.start}
 							gameState={this.state.inPlay} 
 							btns={this.state.btns}

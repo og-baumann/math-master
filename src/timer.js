@@ -1,26 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faStopwatch from '@fortawesome/fontawesome-free-solid/faStopwatch'
 import './assets/css/timer.css';
 import logo from './assets/images/logo.png';
 
-class Timer extends Component {
+const Timer = ({gameState, playTime, scoreCard}) => {
+	let mins = playTime[0];
+	let secs = playTime[1];
+	let mill = playTime[2] < 10 ? '0' + playTime[2] : playTime[2];	
 
-	render () {
-
-		let mins = this.props.playTime[0];
-		let secs = this.props.playTime[1];
-		let mill = this.props.playTime[2] < 10 ? '0'+this.props.playTime[2] : this.props.playTime[2];
-
-		if(!this.props.gameState || this.props.gameState === 'gameOver') {
-			return (
-				<div className="mm-timer">
+	if(!gameState || gameState === 'gameOver') {
+		return	<div className="mm-timer">
 					<div className="mm-title"><img src={logo} alt="MathMaster" /></div>
 				</div>
-			)
-		} else {
-			return (
-				<div className="mm-timer">
+	} else {
+		return 	<div className="mm-timer">
 					<div className="mm-clock">
 						<div>
 							<FontAwesomeIcon className="mm-icon" icon={faStopwatch} />
@@ -29,10 +23,8 @@ class Timer extends Component {
 						<div>{secs}<span>s </span></div>
 						<div>{mill}</div>
 					</div>
-					<div className="mm-score"><span>Score</span>: {this.props.scoreCard}</div>
+					<div className="mm-score"><span>Score</span>: {scoreCard}</div>
 				</div>
-			)
-		}
 	}
 }
 
