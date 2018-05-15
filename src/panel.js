@@ -4,8 +4,8 @@ import './assets/css/panel.css';
 const Panel = ({action, play, gameState, btns, clickAction}) => {
 	if(gameState === 'play') {
 		return 	<div className="mm-panel">
-					<div>
-						{btns.map((a,i) => (<button onClick={clickAction} value={a} key={i} className="mm-btn">{a}</button>))}
+					<div className="mm-btn-group">
+						{btns.map((a,i) => (<div key={i}><button onClick={clickAction} value={a} key={i} className="mm-btn">{a}</button></div>))}
 					</div>
 				</div>
 	} else {

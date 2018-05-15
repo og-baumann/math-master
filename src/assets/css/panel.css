@@ -35,32 +35,45 @@ form {
 	cursor: pointer;
 }
 
-.mm-btn {
-	background: #fff;
-	height: 44px;
-	display: inline-block;
+.mm-btn-group {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	border-spacing: 5px;
+}
+
+.mm-btn-group > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.mm-btn
+{
+	position: relative;
+	border-radius: 10px;
 	font-size: 1.4rem;
-	color: #2980b9;
-	border: solid 1px #2980b9;
-	padding: 12px;
-	width: 25%;
-	text-align: center;
-	border-width: 1px 1px 1px 0;
-	cursor: pointer;
-	transition: 200ms;
+	color: #FFF;
+	width: 100%;
+	padding: 10% 0;
+	text-decoration: none;
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;		
 }
 
-.mm-btn:hover {
-	background: #2980b9;
-	color: #fff;
+.mm-btn:active
+{
+	transform: translate(0px,5px);
+  	-webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
 }
 
-.mm-btn:first-child {
-	border-left: solid 1px;
-	border-radius: 4px 0 0 4px;
+.mm-btn:focus {
+  outline: none;
 }
-
-.mm-btn:last-child {
-	border-radius: 0 4px 4px 0;
-}
-

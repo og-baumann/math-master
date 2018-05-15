@@ -86,12 +86,15 @@ class Main extends Component {
 		let key = Math.round(Math.random() * 3);
 
 		this.setState(prev =>({btns: prev.btns.map(function rnd (k,i) {
-			let r = Math.round(Math.random() * ((a + 30) - (a - 30) + 1) - (a+30));
+			let r = Math.round(Math.random() * ((a + 30) - (a - 30) + 1) - (a+30)), mod;
 			if(key === i) {
 				return a;
 			}
-			else if(r !== a){
-				return r;
+
+			mod = a < 0 && r > 0 || a > 0 && r < 0 ? -1 : 1;
+
+			if(r !== a){
+				return r * mod;
 			} else {
 				return rnd(k,i);
 			}
